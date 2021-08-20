@@ -1,0 +1,329 @@
+input[type="text"],
+input[type="number"] {
+    height: 44px;
+    width: calc(100% - 170px);
+    border: none;
+    padding: 0.25em 0.5em;
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 1.1;
+    background-color: #fff;
+    margin-right: 1px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.switch > input[type="checkbox"]:checked ~ .test {
+    background-color: red;
+}
+
+* {
+    font-family: 'PT Sans', sans-serif;
+    outline: none;
+}
+
+h3 {
+    margin: 40px 0 0;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    display: inline-block;
+    margin: 0 10px;
+}
+a {
+    color: #42b983;
+}
+
+.search {
+    width: 940px;
+    min-height: 153px;
+}
+
+.panel {
+    width: 100%;
+}
+
+.upper {
+    padding: 32px 0;
+    background: rgb(131,179,229);
+    background: linear-gradient(90deg, rgba(131,179,229,1) 35%, rgba(168,213,233,1) 100%);
+}
+
+.lower {
+    height: 45px;
+    background-color: #e6f2fe;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 22px;
+    margin: 0 10px;
+    order: 2;
+}
+
+#type {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #5e9969;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+#type:checked ~ .switch > .slider:before {
+    -webkit-transform: translateX(18px);
+    -ms-transform: translateX(18px);
+    transform: translateX(18px);
+}
+
+
+#type:checked ~ .label-name {
+    color: #adb9c4;
+    border-bottom-color: transparent;
+}
+
+#type:checked ~ .label-main {
+    color: #506981;
+    border-bottom-color:  #506981;
+}
+
+select {
+    height: 44px;
+    -width: 256px;
+    border: none;
+    padding: 0.25em 0.5em;
+    font-size: 16px;
+    cursor: pointer;
+    line-height: 1.1;
+    background-color: #fff;
+    margin-right: 1px;
+    position: relative;
+    box-sizing: border-box;
+    flex: 1 1 auto;
+    vertical-align: top;
+}
+
+select:last-child {
+    margin-right: 0;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select::after {
+    content: "";
+    width: 0.8em;
+    height: 0.5em;
+    background-color: var(--select-arrow);
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    grid-area: select;
+    justify-self: end;
+}
+
+select:focus + .focus {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    bottom: -1px;
+
+    border-radius: inherit;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+.button-search {
+    background-color: #5e9969;
+    border: none;
+    color: white;
+    width: 130px;
+    height: 44px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all .3s;
+    vertical-align: top;
+}
+
+.button-search:hover {
+    background-color: #487751;
+}
+
+.panel-container {
+    display: flex;
+    padding: 28px 20px 0 20px;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.panel-container input[type="text"],
+.panel-container input[type="number"] {
+    background-color: #e6f2fe;
+    width: 185px;
+}
+
+.panel-price input[type="text"],
+.panel-price input[type="number"] {
+    width: 130px;
+}
+
+.panel-container label {
+    width: 54px;
+    height: 44px;
+    background-color: #c2e3f2;
+    line-height: 44px;
+    text-align: center;
+    user-select: none;
+    display: inline-block;
+}
+
+.add-button {
+    background-color: transparent;
+    border: 1px solid #506981;
+    border-radius: 5px;
+    flex: 1;
+    color: #506981;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.add-button:hover {
+    border-color: #3f576e;
+    color: #3f576e;
+}
+
+.panel-element {
+    display: flex;
+    align-items: center;
+    flex-flow: row;
+}
+
+.label-main {
+    color: #adb9c4;
+    border-bottom: 1px dotted transparent;
+    text-decoration: none;
+    transition: all .3s;
+    order: 1;
+    cursor: default;
+    user-select: none;
+}
+
+.label-name {
+    color: #506981;
+    border-bottom: 1px dotted #506981;
+    text-decoration: none;
+    transition: all .3s;
+    order: 4;
+    cursor: default;
+    user-select: none;
+}
+
+.panel-element a {
+    color: #506981;
+    margin: 0 20px 0 20px;
+    text-decoration: none;
+    position: relative;
+    transition: all .3s;
+}
+
+.panel-element a:last-child {
+    margin-right: 0;
+}
+
+.group *:first-child {
+    border-radius: 5px 0 0 5px;
+}
+
+.group *:last-child {
+    border-radius: 0 5px 5px 0;
+}
+
+.panel-element a.active {
+    color: #88949f;
+}
+
+.panel-element a:before {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    content: "";
+    background-image: url('../images/add.svg');
+    background-size: 20px;
+    left: -25px;
+}
+
+.panel-element a.active:before {
+    background-image: url('../images/cross.svg');
+}
+
+.panel-element a:hover {
+    color: #222f3b;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.group *:nth-last-child(2) {
+    margin-right: 0;
+}
+
+.flex {
+    display: flex;
+    margin: 0 20px;
+}
+
+.panel-size select {
+    width: 185px;
+    margin-left: 1px;
+    background-color: #e6f2fe;
+}
+
+.upper input[type="text"] {
+    flex: 1 auto;
+}
